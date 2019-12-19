@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<title>JSFiddle документация</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="1.css">
+<script type="text/javascript" src="1.js"></script>
+</head>
+
+<body>
+<h1>Встраивание проектов</h1>
+Встраивание предназначено для показа проекта с работающим результатом на любой другой странице.<br><br>
+Встраивание доступно из действующего меню, пункт <span class="btn">&#8249;&#8250; Embed</span>.<br>
+<div class="caption"><img src="img/embed.png" width=80%><br></div>
+
+<h3>Вставка имеет несколько вариантов отображения:</h3>
+<div class=list><strong>Tabs</strong> – выбор вкладок, которые будут показаны во вставке. Порядок расположения вкладок (<tt>js,css,html,results</tt>) можно изменить в строке URL-адреса - <a href="#changingTabsOrder" onmouseover="show('Изменение порядка расположения вкладок')" onmouseout="hide()">смотрите ниже</a>.<br>
+Если отключить все вкладки, то будут показаны все.<br>
+Если в проекте были подключены внешние ресурсы, они также будут показаны: вкладка <tt>Resources</tt>. При отключении любой из вкладок (<tt>JavaScript</tt>, <tt>HTML</tt>, <tt>CSS</tt>, <tt>Result</tt>), вкладка ресурсов также отключается.<br>
+Вкладка ресурсов выглядит примерно так:<br><br>
+<div class=indent1><span style="text-transform:uppercase;">External resources loaded into this fiddle:</span><br>
+<tt>three.min.js</tt></div><br>
+то есть, в ней сообщается, что в данном проекте загружен внешний ресурс и дается название этого ресурса, в нашем случае это библиотека <tt>three.min.js</tt>.
+При этом название ресурса будет ссылкой на загруженный файл.<br><br></div>
+
+<div class=list><strong>Visual</strong> – светлая (<strong>Light</strong>) или темная (<strong>Dark</strong>) тема оформления.<br>
+Код вставки фрейма со светлой темой (см. примечание переводчика ниже):<br>
+<pre>&#60;iframe src="https://jsfiddle.net/zalun/NmudS/embedded/result,js,html,css/"&#62;&#60;/iframe&#62;</pre>
+Код того же фрейма, но с темной темой будет таким:
+<pre>&#60;iframe src="https://jsfiddle.net/zalun/NmudS/embedded/result,js,html,css/dark/"&#62;&#60;/iframe&#62;</pre>
+Также можно установить конкретные варианты цвета (шестнадцатиричный код цвета):<br>
+<strong>Font color</strong> - цвет шрифта,<br>
+<strong>Accent color</strong> - цвет выделения,<br>
+<strong>Code background</strong> - фон кода,<br>
+<strong>Menu background</strong> - фон меню.
+<div class=note_trans><b>Примечание переводчика:</b> Все эти дополнительные настройки цвета (Font color, Accent color, Code background, Menu background) не работают. Код для вставки, как скрипта, так и фрейма изменяется, в нем появляются соответствующие параметры, но изменений не происходит.<br>
+Например, код скрипта:<br>
+<pre class="wrap">&#60;script async src="//jsfiddle.net/zalun/NmudS/embed/?fontColor=ff0000&accentColor=ff0000&bodyColor=0000ff&menuColor=0000ff"&#62;&#60;/script&#62;</pre>
+код фрейма<br>
+<pre class="wrap">&#60;iframe width="100%" height="300" src="//jsfiddle.net/zalun/NmudS/embedded/?fontColor=ff0000&accentColor=ff0000&bodyColor=0000ff&menuColor=0000ff" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"&#62;&#60;/iframe&#62;</pre></div>
+<div class=note_trans><b>Примечание переводчика:</b> Обратите внимание на сам код, что в скрипте, что во фрейме, в значении аргумента <tt>src</tt> пропущено начало url-адреса, а именно: <tt>https:</tt>.
+Без этого участка кода вставка не будет работать и его нужно добавить вручную.</div>
+<br></div>
+
+<div class=list><strong onmouseover="show('embed snippet - код для вставки')" onmouseout="hide()">Embed snippet</strong> – для вставки можно использовать либо <tt>iframe</tt>, либо <tt>script</tt>.<br>
+Для перехода к <tt>iframe</tt>, правее названия поля <strong>Embed snippet</strong> есть ссылка-вопрос <strong>Prefer iframe?:</strong> - предпочитаете фрейм?
+При клике на ней произойдет смена кода скрипта на код фрейма, а ссылка-вопрос изменится на <strong>Use script</strong> - использовать скрипт, клик по ней вернет код скрипта обратно.<br>
+Преимущество использования скрипта в том, что при этом не блокируется отображение и высота может задаваться автоматически, так что он соответствует коду в каждой вкладке.<br>
+При переходе к <tt>iframe</tt> ниже кода фрейма дается предупреждение об этом:
+<div class=indent1 style="text-indent:0; font-weight:600;">No autoresizing to fit the code<br>
+Render blocking of the parent page</div>
+что означает:
+<div class=indent1 style="text-indent:0;">Нет автоматического изменения размера окна в соответствии с размером данного кода<br>
+Блокировка визуализации родительской страницы</div>
+</div><br>
+
+<h3 id="changingTabsOrder">Изменение порядка расположения вкладок</h3>
+Например, чтобы показать вкладку результата первой добавьте в строку URL-адреса <tt>result,js,html,css</tt> - вот так:
+<pre>&#60;iframe src="https://jsfiddle.net/zalun/NmudS/embedded/result,js,html,css/"&#62;&#60;/iframe&#62;</pre>
+
+<br><br>
+</body></html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<title>JSFiddle документация</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="1.css">
+<script type="text/javascript" src="1.js"></script>
+</head>
+
+<body>
+<h1>Передача ответа непосредственно из архива (репозитория) Github</h1>
+В то время как демонстрация может использовать асинхронные запросы, JSFiddle будет считывать их и отправлять с помощью правильного
+<a href="https://ru.wikipedia.org/wiki/MIME" target="_blank" onmouseover="show('MIME (/maɪm/, англ. Multipurpose Internet Mail Extensions — многоцелевые<br>расширения интернет-почты) — стандарт, описывающий передачу различных<br>типов данных по электронной почте, а также, в общем случае, спецификация<br>для кодирования информации и форматирования сообщений таким образом,<br>чтобы их можно было пересылать по Интернету.')" onmouseout="hide()">MIME</a>-<a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_MIME-%D1%82%D0%B8%D0%BF%D0%BE%D0%B2" target="_blank" onmouseover="show('типы данных, которые могут быть переданы посредством сети интернет<br>с применением стандарта MIME. Ниже приведён список MIME-заголовков<br>и расширений файлов.')" onmouseout="hide()">типа</a>.
+<br><br>
+
+<h3>Структура каталога демонстрации</h3>
+
+<pre><br>Demo Directory/
+  demo.response.html
+  demo.response.json
+  demo.response.xml<br><br></pre>
+
+<h3>Запуск демонстрации в JSFiddle</h3>
+
+<pre><br>https://jsfiddle.net/gh/get/response.{extension}/{github_tree}/<br><br></pre>
+Части URL-адреса в примерах:
+<div class=list><code>extension</code> – расширение файла <tt>demo.response.{extension}</tt> в репозитории демонстрации на github'е.</div>
+<div class=list><code>github_tree</code> – путь к каталогу, который используется для его отображения на странице github'а (без <tt>http://github.com/</tt>).</div>
+Работоспособность JSONP не предоставляется. Её можно получить при помощи необработанного URL-адреса репозитория GitHub'а.<br><br>
+
+<h3>Пример</h3>
+Содержимое из:
+<pre>http://github.com/zalun/jsFiddleGithubDdemo/raw/master/Demo/demo.response.html</pre>
+будет возвращено с <a href="https://ru.wikipedia.org/wiki/MIME" target="_blank" onmouseover="show('MIME (/maɪm/, англ. Multipurpose Internet Mail Extensions — многоцелевые<br>расширения интернет-почты) — стандарт, описывающий передачу различных<br>типов данных по электронной почте, а также, в общем случае, спецификация<br>для кодирования информации и форматирования сообщений таким образом,<br>чтобы их можно было пересылать по Интернету.')" onmouseout="hide()">MIME</a>-<a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_MIME-%D1%82%D0%B8%D0%BF%D0%BE%D0%B2" target="_blank" onmouseover="show('типы данных, которые могут быть переданы посредством сети интернет<br>с применением стандарта MIME. Ниже приведён список MIME-заголовков<br>и расширений файлов.')" onmouseout="hide()">типом text/html</a>, если данный URL-адрес был загружен из:
+<pre>https://jsfiddle.net/gh/get/response.html/zalun/jsFiddleGithubDemo/tree/master/Demo/</pre>
+<div class=note><span style="font-size:2em; background-color:#00bfff; color:#ffffff;">&nbsp;&#9432;&nbsp;</span>&nbsp; Пример:<br>
+<pre><a href="http://jsfiddle.net/gh/get/mootools/1.2/zalun/jsFiddleGithubDemo/tree/master/Demo/" target="_blank">http://jsfiddle.net/gh/get/mootools/1.2/zalun/jsFiddleGithubDemo/tree/master/Demo/</a></pre></div>
+
+<br><br>
+</body></html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<title>JSFiddle документация</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="1.css">
+<script type="text/javascript" src="1.js"></script>
+</head>
+
+<body>
+<h1>Отображение проектов пользователя</h1>
+Имеется возможность создания плагинов (модулей) отображения проектов, созданных конкретным пользователем.<br>
+<a href="https://ru.wikipedia.org/wiki/HTTP#GET" target="_blank"><span style="display:inline-block; color:#ffffff; background-color:#1e90ff; padding:5px 15px; border-width:1px; border-radius:1em; margin:0.5em;">метод GET</span></a>
+<pre>https://jsfiddle.net/api/user/:username/demo/list.json</pre>
+<div class=note><span style="font-size:2em; background-color:#00bfff; color:#ffffff;">&nbsp;&#9432;&nbsp;</span>&nbsp; Пример:<br>
+<pre><a href="http://jsfiddle.net/api/user/zalun/demo/list.json?callback=Api&sort=framework&start=5&limit=5" target="_blank">http://jsfiddle.net/api/user/zalun/demo/list.json?callback=Api&sort=framework&start=5&limit=5</a></pre>
+</div><br>
+<div style="font-family:Segoe UI; font-size:90%; margin-left:10px;">
+&nbsp; &nbsp; &nbsp; <span class="lnk" onclick='javascript:show_img("rect1","rect2");'>Запрос (Request)</span>
+&nbsp; &nbsp; <span class="lnk" onclick='javascript:show_img("rect2","rect1");'>Ответ (Response)</span>
+<div id="rect1" style="background-color:#fff; display:block; margin:0px; padding:0px;">
+<hr class="underline" style="margin-left:25px; width:100px;">
+<div style="font-size:120%;">Параметры запроса (Query Parameters)</div>
+<table cellpadding=10 rules="rows" frame="hsides">
+<tr valign=top><td><code>callback</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>string</tt></td><td>Имя функции для <a href="https://ru.wikipedia.org/wiki/Cross-origin_resource_sharing" target="_blank" onmouseover="show('Cross-origin resource sharing (CORS; с англ. — «совместное использование<br>ресурсов между разными источниками») — технология современных<br>браузеров, которая позволяет предоставить веб-странице доступ к ресурсам<br>другого домена. До недавнего времени основным способом преодоления<br>ограничений, наложенных в правиле ограничения домена (same-origin-policy<br>- принцип одинакового источника) относительно XSS запросов, было<br>использование JSONP. Сам JSONP имеет неустранимое ограничение —<br>позволяет только получение данных GET методом, то есть отправка данных<br>через POST метод остается недоступной.')" onmouseout="hide()">перекрестного домена</a>.
+Если функция обратного вызова не предоставлена, возвратится стандартный JSON.<br><br>Значение по умолчанию: нет.</td></tr>
+<tr valign=top><td><code>start</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>integer</tt></td><td>Смещение элемента.<br><br>Значение по умолчанию: <tt>0</tt>.</td></tr>
+<tr valign=top><td><code>limit</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>integer</tt></td><td>Количество возвращаемых элементов.<br><br>Значение по умолчанию: 10</td></tr>
+<tr valign=top><td><code>sort</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>string</tt></td><td>Тип сортировки.<br>По дате (<tt>date</tt>), алфавиту (<tt>alphabetical</tt>) или фреймворку  (<tt>framwork</tt>) <br>Значение по умолчанию: <tt>date</tt>.</td></tr>
+<tr valign=top><td><code>order</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>string</tt></td><td><tt>desc</tt> или <tt>asc</tt><br><br>Значение по умолчанию: <tt>asc</tt>.</td></tr>
+<tr valign=top><td><code>framework</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>string</tt></td><td>Фильтр фреймворка.<br><br>Значение по умолчанию: нет.</td></tr>
+</table>
+</div>
+<div id="rect2" style="background-color:#eee; display:none; margin:0px; padding:0px;">
+<hr class="underline" style="margin-left:145px; width:100px;">
+<pre>Api({
+  "status": "ok",
+  "list": [
+    {
+      "description": "...",
+      "author": "{username}",
+      "url": "...",
+      "created": "...",
+      "framework": "...",
+      "version": 123,              // base version number (номер основной версии)
+      "latest_version": 234,       // latest version number (номер последней версии)
+      "title": "..."
+    },
+    // ...
+  ],
+  "overallResultSetCount": 12      // number of the results (итоговый номер)
+});</pre></div></div><br>
+
+<br><br>
+</body></html>

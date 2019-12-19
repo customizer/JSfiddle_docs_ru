@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<title>JSFiddle документация</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="1.css">
+<script type="text/javascript" src="1.js"></script>
+</head>
+
+<body>
+<h1>Настройки панелей</h1>
+Каждая панель имеет свои собственные настройки.
+
+<h3>Панель HTML<br><span style="font-size:0.8em;">(HTML panel)</span></h3>
+<div class=list><strong class="lnk" onmouseover="show('Language - язык')" onmouseout="hide()">Language</strong> – можно выбрать язык документа - <a href="https://ru.wikipedia.org/wiki/HTML" target="_blank" onmouseover="show('HTML (от англ. HyperText Markup Language — «язык гипертекстовой разметки»)<br>— стандартизированный язык разметки документов во Всемирной паутине.<br>Большинство веб-страниц содержат описание разметки на языке HTML (или XHTML).<br>Язык HTML интерпретируется браузерами; полученный в результате интерпретации<br>форматированный текст отображается на экране монитора компьютера или<br>мобильного устройства.')" onmouseout="hide()">HTML</a>
+или <a href="https://ru.wikipedia.org/wiki/Haml" target="_blank" onmouseover="show('Haml (HTML abstraction markup language) — язык разметки для упрощённой<br>генерации HTML. HAML компилируется в HTML.')" onmouseout="hide()">HAML</a>. Значение по умолчанию - HTML.</div>
+<div class=list><strong class="lnk" onmouseover="show('Doctype - сокращ. англ. слов document type - тип документа')" onmouseout="hide()">Doctype</strong> – тип документа, т.е. выбор из
+<a href="https://ru.wikipedia.org/wiki/XHTML" target="_blank" onmouseover="show('XHTML-1.0-Strict: тип, исключающий использование всех элементов и<br>атрибутов, задающих графическое отображение (например, элемент <tt>font</tt><br>или атрибут <tt>bgcolor</tt>). Это наиболее предпочтительный тип документов.<br>Strict переводится как &#171;строгий&#187;.')" onmouseout="hide()">XHTML 1.0 Strict</a>,
+<a href="https://ru.wikipedia.org/wiki/XHTML" target="_blank" onmouseover="show('XHTML-1.0-Transitional: тип, допускающий использование элементов<br>и атрибутов, задающих графическое отображение. Указанные элементы<br>рекомендуется использовать только при необходимости, например, для<br>облегчения миграции документов c HTML 3.2 на XHTML.<br>Transitional переводится как &#171;переходной&#187;.')" onmouseout="hide()">XHTML 1.0 Transitional</a>,
+<a href="https://ru.wikipedia.org/wiki/HTML5" target="_blank" onmouseover="show('HTML5 (англ. HyperText Markup Language, version 5) — язык для<br>структурирования и представления содержимого всемирной паутины.<br>Это пятая версия HTML. Цель разработки HTML5 — улучшение уровня<br>поддержки мультимедиа-технологий с одновременным сохранением<br>обратной совместимости, удобочитаемости кода для человека и<br>простоты анализа для парсеров.')" onmouseout="hide()">HTML5</a>,
+<a href="https://ru.wikipedia.org/wiki/HTML" target="_blank" onmouseover="show('Строгий (strict) вариант языка: не содержит элементов, помеченных<br>как «устаревшие» или «не одобряемые» (deprecated).')" onmouseout="hide()">HTML 4.01 Strict</a>,
+<a href="https://ru.wikipedia.org/wiki/HTML" target="_blank" onmouseover="show('Переходный (transitional) вариант языка: содержит устаревшие теги<br>в целях совместимости и упрощения перехода со старых версий HTML.')" onmouseout="hide()">HTML 4.01 Transitional</a>,
+<a href="https://ru.wikipedia.org/wiki/HTML" target="_blank" onmouseover="show('Вариант языка HTML с фреймами (frame set - набор фреймов<br>т.е. рамок или кадров): аналогичен переходному,<br>но содержит также теги для создания наборов фреймов.')" onmouseout="hide()">HTML 4.01 Frameset</a>.
+Значение по умолчанию - HTML5.</div>
+<div class=list><strong class="lnk" onmouseover="show('Body tag - тег <tt>&#706;body&#707;</tt> означающий &#171;тело&#187; документа HTML.')" onmouseout="hide()">Body tag</strong> – обычно используется для изменения стиля, вроде <tt>&#60;body class=&quot;dark_ui&quot;&#62;</tt>.
+Некоторые фреймворки (<a href="https://ru.wikipedia.org/wiki/Dojo" target="_blank" onmouseover="show('Dojo (додзё) — свободная модульная библиотека JavaScript.<br>Разработана с целью упростить ускоренную разработку,<br>основанных на JavaScript или AJAX, приложений и сайтов.')" onmouseout="hide()">Dojo</a>)
+используют его для введения <span class="lnk" onmouseover="show('Виджет – это маленькая программа, которая выполняет ту<br>или иную функцию, например часы, погода, новости и т.д.')" onmouseout="hide()">виджетов (widget)</span> и загрузки CSS. По умолчанию - пустая строка.</div>
+<div class="caption"><img src="img/html_panel.png" width=40%><br></div>
+
+<h3>Панель CSS<br><span style="font-size:0.8em;">(CSS panel)</span></h3>
+<div class=list><strong class="lnk" onmouseover="show('Language - язык')" onmouseout="hide()">Language</strong> – изменяет препроцессор, выбор из
+<a href="https://ru.wikipedia.org/wiki/CSS" target="_blank" onmouseover="show('CSS (/siːɛsɛs/ англ. Cascading Style Sheets — каскадные таблицы стилей) —<br>формальный язык описания внешнего вида документа, написанного с<br>использованием языка разметки.<br>Преимущественно используется как средство описания, оформления внешнего<br>вида веб-страниц, написанных с помощью языков разметки HTML и XHTML, но<br>может также применяться к любым XML-документам, например, к SVG или XUL.')" onmouseout="hide()">CSS</a>,
+<a href="https://ru.wikipedia.org/wiki/Sass" target="_blank" onmouseover="show('Sass (Syntactically Awesome Stylesheets) — модуль, включенный в Haml.<br>Sass — это метаязык на основе CSS, предназначенный для увеличения<br>уровня абстракции CSS кода и упрощения файлов каскадных таблиц стилей.<br>Язык Sass имеет два синтаксиса:<div class=list>sass — отличается отсутствием фигурных скобок, в нём<br>вложенные элементы реализованы с помощью отступов;</div><div class=list>SCSS (Sassy CSS) — использует фигурные скобки, как и сам CSS.</div>')" onmouseout="hide()">SCSS</a>,
+<a href="https://ru.wikipedia.org/wiki/Sass" target="_blank" onmouseover="show('Sass (Syntactically Awesome Stylesheets) — модуль, включенный в Haml.<br>Sass — это метаязык на основе CSS, предназначенный для увеличения<br>уровня абстракции CSS кода и упрощения файлов каскадных таблиц стилей.<br>Язык Sass имеет два синтаксиса:<div class=list>sass — отличается отсутствием фигурных скобок, в нём<br>вложенные элементы реализованы с помощью отступов;</div><div class=list>SCSS (Sassy CSS) — использует фигурные скобки, как и сам CSS.</div>')" onmouseout="hide()">SASS</a>,
+<a href="https://ru.wikipedia.org/wiki/PostCSS" target="_blank" onmouseover="show('PostCSS — программа, которая автоматизирует рутинные<br>операции с CSS с помощью расширений, написанных<br>на языке JavaScript.')" onmouseout="hide()">PostCSS (Stage 0+)</a>. Значение по умолчанию - CSS.</div>
+<div class=list><strong class="lnk" onmouseover="show('Options - опции, варианты, параметры.')" onmouseout="hide()">Options</strong> – дополнительные возможности, например как возможность <a href="https://github.com/necolas/normalize.css" target="_blank" onmouseover="show('Normalize.css представляет собой настраиваемый CSS файл, при помощи<br>которого браузеры начинают отображать все элементы более последовательно<br>и в соответствии с современными стандартами.<br>Что делает <tt>normalize.css</tt>?<div class=list>Сохраняет эффективные значения по умолчанию, в отличие от<br>&nbsp; &nbsp; многих перенастроек css.</div><div class=list>Нормализует стили для широкого спектра элементов.</div><div class=list>Исправляет ошибки и общие несоответствия браузера.</div><div class=list>Небольшими изменениями улучшает удобство использования.</div><div class=list>С помощью подробных комментариев объясняет, что делает код.</div>')" onmouseout="hide()">Normalize CSS</a>.
+Значение по умолчанию Normalized CSS - нормализованный CSS.</div>
+<div class="caption"><img src="img/css_panel.png" width=40%><br></div>
+
+<h3>Панель JavaScript<br><span style="font-size:0.8em;">(JavaScript panel)</span></h3>
+
+<div class=list><strong class="lnk" onmouseover="show('Language - язык')" onmouseout="hide()">Language</strong> – препроцессор (предварительная обработка), выбор из JavaScript, CoffeeScript, JavaScript 1.7, Babel+JSX, TypeScript, CoffeeScript 2, Vue, React, Preact и т.д. Значение по умолчанию - JavaScript.</div>
+
+<div class=list><strong class="lnk" onmouseover="show('Frameworks & Extensions - фреймворки и расширения.')" onmouseout="hide()">Frameworks & Extensions</strong> – большое число часто используемых JS фреймворков (и их расширений).
+Значение по умолчанию - No-libary (pure JS) т.е без применения библиотек (чистый JavaScript, часто этот вариант в шутку называют &#171;ванильным&#187; JavaScript'ом - Vanilla JS).
+<div class=note_trans><b>Примечание переводчика:</b> <a href="https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA" target="_blank">Фре&#769;ймворк</a> (иногда фреймво&#769;рк; англицизм, неологизм от framework — остов, каркас, структура) — программная платформа, определяющая структуру программной системы; программное обеспечение, облегчающее разработку и объединение разных компонентов большого программного проекта.<br>
+
+Употребляется также слово «каркас», а некоторые авторы используют его в качестве основного, в том числе не базируясь вообще на англоязычном аналоге. Можно также говорить о каркасном подходе как о подходе к построению программ, где любая конфигурация программы строится из двух частей:<br>
+&nbsp; &#9679; &nbsp; Постоянная часть — каркас, не меняющийся от конфигурации к конфигурации и несущий в себе гнёзда, в которых размещается вторая, переменная часть;<br>
+&nbsp; &#9679; &nbsp; Сменные модули (или точки расширения).</div></div>
+<div class="caption"><img src="img/js_panel.png" width=40%><br></div>
+<div class=list><strong class="lnk" onmouseover="show('Load type - тип загрузки.')" onmouseout="hide()">Load type</strong> – способ загрузки JS-кода в редактор - подробности смотрите в следующей таблице:<br><br>
+<table class="tbl_1" border="1" cellpadding="5" style="margin-left:3em;">
+<tr class="head1"><td>Тип загрузки<br><span style="font-size:0.8em;">Load type</span></td><td>Описание<br><span style="font-size:0.8em;">Description</span></td></tr>
+<tr><td><strong class="lnk" onmouseover="show('On Load - на загрузку, т.е. по окончании события <tt>load</tt> - загрузка.')" onmouseout="hide()">On Load</strong></td><td>код упаковывается так, что он будет запущен по событию окна <tt>onLoad</tt>, т.е. когда загрузилась вся страница, включая стили, картинки и другие ресурсы. Значение по умолчанию.</td></tr>
+<tr><td><strong class="lnk" onmouseover="show('On DOM Ready - на готовность DOM, т.е. по окончании построения DOM<br>(Document Object Model) — «объектной модели документа».')" onmouseout="hide()">On DOM Ready</strong></td><td>код упаковывается так, что он будет запущен по событию окна <tt>onDomReady</tt>, т.е. когда браузер полностью загрузил HTML, было построено DOM-дерево, но внешние ресурсы, такие как картинки <tt>&#60;img&#62;</tt> и стили, могут быть ещё не загружены.</td></tr>
+<tr><td><strong class="lnk" onmouseover="show('No wrap - bottom of <tt>&#706;head&#707;</tt> - не упакован,<br>т.е. в нижней части тега <tt>&#706;head&#707;</tt>.')" onmouseout="hide()">No wrap - bottom of <tt>&#60;head&#62;</tt></strong></td><td>код JavaScript не упаковывается и размещается внутри и внизу тега <tt>&#60;head&#62;</tt>, т.е. пока не будет выполнен скрипт, содержимое страницы не будет показано.</td></tr>
+<tr><td><strong class="lnk" onmouseover="show('No wrap - bottom of <tt>&#706;body&#707;</tt> - не упакован,<br>т.е. в нижней части тега <tt>&#706;body&#707;</tt>.')" onmouseout="hide()">No wrap - bottom of <tt>&#60;body&#62;</tt></strong></td><td>код JavaScript не упаковывается и размещается внутри и внизу тега <tt>&#60;body&#62;</tt>, т.е. вначале показывается страница, а затем выполняется скрипт.</td></tr>
+</table><br></div>
+
+<div class=list><strong class="lnk" onmouseover="show('Framework <tt>&#706;script&#707;</tt> attribute - атрибут тега <tt>&#706;script&#707;</tt> фреймворка.')" onmouseout="hide()">Framework <tt>&#60;script&#62;</tt> attribute</strong>
+– атрибут, добавляемый к тегу <tt>&#60;script&#62;</tt> включенного фреймворка, т.е. <tt>&#60;script src="..." data-angular-custom-thingy&#62;</tt>. Значение по умолчанию - <tt>ie.data-type=""</tt>.</div>
+
+<br><br>
+</body></html>

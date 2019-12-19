@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>JSFiddle документация</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" href="img/Jsfiddle-logo.png" />
+<style type="text/css">
+body {background-color:#f5f5f5; overflow:hidden; font-family:Helvetica, Arial, sans-serif; font-size:11pt; text-align:left; line-height:1.25;}
+ul {margin-left:10px; padding-left:10px; white-space:nowrap;}
+li {margin-left:0px;}
+a {rel="noopener"; color:#000080; background-color:#ffffff; text-decoration:none;}
+a:focus {color:#ffffff; background-color:#1e90ff;}
+a:hover {text-decoration:underline;}
+.floatTip {position:absolute; width:auto; border:1px solid #87cefa; border-radius:8px; box-shadow:3px 3px 3px rgba(0, 0, 0, .3); padding:8px; font-family:sans-serif; font-size:9pt; color:#333; background:#e0ffff; opacity:0; filter:alpha(opacity=0); transition-delay:0.5s; transition-duration:0.5s;}
+.lnk {color:#000080; cursor:pointer; text-decoration:none; background-color:#ffffff; white-space:nowrap;}
+.btn {border-style:solid; border-width:1px; border-color:#a9a9a9; border-radius:3px; background-color:#e0e0e0; font-weight:400; color:#000000; padding:0px 3px; font-family:Courier New;}
+</style>
+<script type="text/javascript" src="1.js"></script>
+<script type="text/javascript" src="7chm.js"></script>
+<script type="text/javascript" src="search.js"></script>
+<base target="main">
+</head>
+<body>
+<div style="background-color:#f5f5f5; width:15%; height:3%; position:absolute; top:0px; left:0px; padding:2px;">
+<span id="hide" class="lnk" style="display:block; float:left;" onmouseover="show('Скрыть левую панель с содержанием справки')" onmouseout="hide()" onclick="hide_content()">&nbsp;&nbsp;Скрыть&nbsp;</span>
+<span id="hide1" class="lnk" style="display:none; float:left;" onmouseover="show('Показать левую панель с содержанием справки')" onmouseout="hide()" onclick="hide_content1()">&nbsp;&nbsp;Показать</span>
+<span id="tabButton" class="lnk" style="display:block; float:right;" onmouseover="show('Поиск в содержимом справки')" onmouseout="hide()" onclick="tab_search()">Поиск&nbsp;&nbsp;&nbsp;</span>
+<span id="tabButton1" class="lnk" style="display:none; float:right;" onmouseover="show('Переход к содержанию справки')" onmouseout="hide()" onclick="tab_search1()">Справка&nbsp;</span>&nbsp;
+<hr style="color:#f5f5f5; margin:1px 0px;"></div>
+
+<div id="search" style="width:15%; height:100%; float:left; overflow:scroll; display:none;"><br><br>
+<form target="data">
+<input type="text" id="textToFind" size="20" value="" placeholder="введите искомое" autofocus>
+<input id="start" type="button" onclick="javascript: findOnPage('textToFind',true); return false; replaceBtn();" value="&#128269;" onmouseover="show('Начать поиск')" onmouseout="hide()" style="padding:0px; background-color:#00ff00; display:inline;">
+<input id="cancel" type="button" onclick="javascript: findOnPage('textToFind',false); return false; replaceBtn();" value="&#9932;" onmouseover="show('Отменить поиск')" onmouseout="hide()" style="padding:0px 1px; color:#fff; background-color:#f00; display:none;">
+</form>
+<hr style="color:#f5f5f5;">
+<div id="note" style="font-size:70%; color:#808080; background-color:#f5f5f5; display:block;">
+Это полнотекстовый поиск по всем статьям справки.<br>
+(для поиска только по содержанию справки воспользуйтесь "поиском по странице" браузера через <span class="btn">F3</span> или <span class="btn">Ctrl</span> + <span class="btn">F</span>)</div>
+<div id="data">
+
+</div>
+</div>
+<div id="content" style="width:15%; height:100%; float:left; overflow:scroll; display:block;"><br><br>
+<a href="overview.htm" onmouseover="show('JSFiddle документация')" onmouseout="hide()">JSFiddle документация</a>
+<br><br>
+
+<b><a href="intro.htm" onmouseover="show('Введение')" onmouseout="hide()">Введение</a></b>
+<ul>
+<li><a href="gettingStarted.htm" onmouseover="show('Начало работы')" onmouseout="hide()">Начало работы</a></li>
+<li><a href="panelsSettings.htm" onmouseover="show('Настройки панелей рабочей области')" onmouseout="hide()">Настройки панелей рабочей области</a></li>
+<li><a href="editorSettings.htm" onmouseover="show('Настройки редактора')" onmouseout="hide()">Настройки редактора</a></li>
+<li><a href="fiddleSettings.htm" onmouseover="show('Панель настроек проекта')" onmouseout="hide()">Панель настроек проекта</a></li>
+<ul>
+<li><a href="fiddleSettings.htm#fiddleMeta" onmouseover="show('Метки проекта')" onmouseout="hide()">Метки проекта</a></li>
+<li><a href="fiddleSettings.htm#externalResources" onmouseover="show('Внешние ресурсы')" onmouseout="hide()">Внешние ресурсы</a></li>
+<li><a href="fiddleSettings.htm#asyncRequests" onmouseover="show('Асинхронные запросы')" onmouseout="hide()">Асинхронные запросы</a></li>
+</ul>
+<li><a href="asyncRequests.htm" onmouseover="show('Асинхронные запросы')" onmouseout="hide()">Асинхронные запросы</a></li>
+<li><a href="embeddingFiddles.htm" onmouseover="show('Встраивание проектов')" onmouseout="hide()">Встраивание проектов</a></li>
+<li><a href="githubIntegration.htm" onmouseover="show('Интеграция с Гитхаб&#8217;ом')" onmouseout="hide()">Интеграция с Гитхаб&#8217;ом</a></li>
+<ul>
+<li><a href="displayFiddleFromAGithubRepository.htm" onmouseover="show('Отображение проекта JSFiddle из архива Github')" onmouseout="hide()">Отображение проекта JSFiddle из архива Github</a></li>
+<li><a href="displayFiddleFromGist.htm" onmouseover="show('Отображение проекта JSFiddle из Gist')" onmouseout="hide()">Отображение проекта JSFiddle из Gist</a></li>
+<li><a href="passResponseDirectlyFromAGithubRepo.htm" onmouseover="show('Передача ответа непосредственно из архива Github')" onmouseout="hide()">Передача ответа непосредственно из архива Github</a></li>
+<li><a href="passResponseDirectlyFromGist.htm" onmouseover="show('Передача ответа непосредственно из Gist')" onmouseout="hide()">Передача ответа непосредственно из Gist</a></li>
+</ul>
+</ul><br>
+
+<b><a href="api.htm" onmouseover="show('API')" onmouseout="hide()">API</a></b>
+<ul>
+<li><a href="displayingUserFiddles.htm" onmouseover="show('Отображение проектов пользователей')" onmouseout="hide()">Отображение проектов пользователей</a></li>
+<li><a href="displayAFiddleFromPOST.htm" onmouseover="show('Отображение проекта по методу POST')" onmouseout="hide()">Отображение проекта по методу POST</a></li>
+<li><a href="getUsername.htm" onmouseover="show('Получение имени пользователя')" onmouseout="hide()">Получение имени пользователя</a></li>
+</ul><br>
+<b><a href="useCases.htm" onmouseover="show('Примеры использования')" onmouseout="hide()">Примеры использования</a></b>
+<ul>
+<li><a href="demosForProductsOrLibraries.htm" onmouseover="show('Демонстрация продуктов или библиотек')" onmouseout="hide()">Демонстрация продуктов или библиотек</a></li>
+<li><a href="bugReportingForGithubIssues.htm" onmouseover="show('Bug reporting (test-case) for Github Issues')" onmouseout="hide()">Отчетность по ошибкам для Github Issues Bug reporting for Github Issues (пробный вариант test-case)</a></li>
+<li><a href="answersOnStackOverflow.htm" onmouseover="show('Ответы на Stack Overflow')" onmouseout="hide()">Ответы на Stack Overflow</a></li>
+<li><a href="liveCodeCollaboration.htm" onmouseover="show('Совместная работа с кодом в реальном времени')" onmouseout="hide()">Совместная работа с кодом в реальном времени</a></li>
+<li><a href="conductingLiveInterviewsForDeveloperPositions.htm" onmouseover="show('Проведение прямых собеседований на должности разработчика')" onmouseout="hide()">Проведение прямых собеседований на должности разработчика</a></li>
+<li><a href="codeSnippetsHosting.htm" onmouseover="show('Размещение фрагментов кода')" onmouseout="hide()">Размещение фрагментов кода</a></li>
+</ul><br><br>
+</div>
+<iframe src="overview.htm" name="main" id="main" style="width:85%; height:101%; float:right; margin-top:-0.5%;" frameborder="0"></iframe>
+</body></html>

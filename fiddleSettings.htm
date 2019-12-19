@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<title>JSFiddle документация</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="1.css">
+<script type="text/javascript" src="1.js"></script>
+</head>
+
+<body>
+<table><tr><td>
+<img src="img/fiddleSetting.png" width=30% align=right>
+<h1>Панель настроек проекта</h1>
+Как уже известно, с левой стороны страницы JSFiddle проекта находится панель настроек проекта.<br>
+Здесь находятся следующие настройки:
+<div class=list><a href="#fiddleMeta" onmouseover="show('Метки проекта')" onmouseout="hide()">Метки проекта</a> (<strong>Fiddle meta</strong>),</div>
+<div class=list><a href="#externalResources" onmouseover="show('Внешние ресурсы')" onmouseout="hide()">Внешние ресурсы</a> (<strong>Resources</strong>),</div>
+<div class=list><a href="#asyncRequests.htm" onmouseover="show('Асинхронные запросы')" onmouseout="hide()">Асинхронные запросы</a> (<strong>Async requests</strong>) (более подробное описание смотрите в отдельной статье <a href="asyncRequests.htm" onmouseover="show('Асинхронные запросы')" onmouseout="hide()">Асинхронные запросы</a>) и</div>
+<div class=list><a href="#other" onmouseover="show('Другое (ссылки, лицензия)')" onmouseout="hide()">Другое (ссылки, лицензия)</a> (<strong>Other</strong> (links, license)).</div>
+Рассмотрим их поподробнее.<br><br>
+
+<h2 id="fiddleMeta">Метки проекта<br>
+<span style="font-size:0.8em;">&nbsp; &nbsp; Fiddle meta</span></h2>
+На данный момент метки проекта включают в себя название (title) и описание (description).
+<div class=list><strong>Title</strong> – добавление названия проекта сделает его доступным на странице вашего публичного профиля.
+Обычно, когда название не установлено, проект будет наполовину публичным (не отображается в списке общедоступных проектов, но у любого, у кого есть прямая ссылка на проект, есть возможность обращения к нему).<br>
+По умолчанию здесь установлено <strong>Untitled fiddle</strong> - проект без названия.</div>
+
+<div class=list><strong>Description</strong> – ну это описание проекта. Оно будет отображаться в списке общедоступных проектов.<br>
+По умолчанию здесь установлено <strong>No description</strong> - т.е. описания нет.</div>
+Под метками проекта находится подсказка <strong>Add title to make the fiddle visible on your profile page</strong>, которая переводится как &#171;Добавьте название проекта, чтобы сделать его видимым на странице вашего профиля&#187;.<br><br>
+</td></tr>
+
+<tr><td>
+<img src="img/resources.png" width=30% align=right>
+<h2 id="externalResources">Внешние ресурсы<br>
+<span style="font-size:0.8em;">&nbsp; &nbsp; Resources</span></h2>
+К проекту можно добавлять внешние ресурсы, такие как CSS и JavaScript.<br>
+Если кликнуть по заголовку Resources откроется меню со строкой ввода URL-адреса и кнопкой&nbsp;<span style="font-size:1.5em; color:#0084ff; line-height:0.5;">&#8853;</span>, которую можно назвать "Добавить". В поле ввода по умолчанию написано JavaScript/CSS URL , т.е. предлагается ввести URL-адрес JavaScript/CSS ресурса.<br>
+Ниже записана подсказка из двух пунктов:
+<div class=list><strong>Paste a direct CSS/JS URL</strong> - вставьте прямой URL-адрес JavaScript/CSS ресурса.
+То есть, для добавления ресурса, вводите конкретный адрес ресурса, нажимаете кнопку Добавить <span style="font-size:1.5em; color:#0084ff; line-height:0.5;">&#8853;</span> и ваш проект будет включен конкретный URL-адрес.</div>
+<div class=list><strong>Type a library name to fetch from CDNJS</strong> - наберите название библиотеки для получения от CDNJS.
+Здесь просто начните вводить название библиотеки и автозавершение строки предложит библиотеки для вставки, выбираете нужную и нажимаете на кнопку <span style="font-size:1.5em; color:#0084ff; line-height:0.5;">&#8853;</span></div>
+<div class=note><span style="font-size:2em; background-color:#00bfff; color:#ffffff;">&nbsp;&#9432;&nbsp;</span>&nbsp; Если хотите использовать динамический ресурс, добавьте фиктивную переменную GET (dummy), то есть вот так <tt>http://example.com/dynamically.php?somevar=somevalue&dummy=.css</tt>.
+Это сообщит JSFiddle о признании его в качестве CSS ресурса.</div><br><br>
+</td></tr>
+
+<tr><td>
+<img src="img/asyncRequests.png" width=30% align=right>
+<h2 id="asyncRequests">Асинхронные запросы<br>
+<span style="font-size:0.8em;">&nbsp; &nbsp; Async requests</span></h2>
+
+/echo simulates Async calls:<br>
+JSON: /echo/json/<br>
+JSONP: //jsfiddle.net/echo/jsonp/<br>
+HTML: /echo/html/<br>
+XML: /echo/xml/<br>
+Более подробно смотрите в <a href="asyncRequests.htm" onmouseover="show('Асинхронные запросы')" onmouseout="hide()">отдельной статье справки</a>.
+See docs for more info.
+
+<br><br>
+</td></tr>
+
+<tr><td>
+<img src="img/other.png" width=30% align=right>
+<h2 id="other">Другое (ссылки, лицензия)<br>
+<span style="font-size:0.8em;">&nbsp; &nbsp; Other (links, license)</span></h2>
+При клике по данному пункту открывается меню с разными ссылками.
+<div class=list><strong>Hosted on DigitalOcean</strong> означает, что все проекты JSFiddle размещаются на площадке <a href="https://m.do.co/c/52e7a0ad196d" target="_blank" onmouseover="show('digital ocean - цифровой океан')" onmouseout="hide()">DigitalOcean</a>.</div>
+Далее идет объявление о правах и отказ от ответственности.
+<div class=list>All code belongs to the poster and no license is enforced. JSFiddle or its authors are not responsible or liable for any loss or damage of any kind during the usage of provided code.</div>
+Вот оно на русском языке:
+<div class=list>Весь код принадлежит человеку его разместившему и никакой лицензии не применяется. JSFiddle или его авторы не несут никакой ответственности за какие-либо убытки или ущерб любого рода, при использовании предоставляемого кода.</div>
+
+<h3>Ссылки<br><span style="font-size:0.8em;">&nbsp; &nbsp; Links</span></h3>
+<div class=list><a href="https://github.com/jsfiddle/jsfiddle-issues/issues" target="_blank" onmouseover="show('Багтрекер — прикладная браузерная или десктопная программа,<br>разработанная с целью помочь разработчикам ПО учитывать и<br>контролировать ошибки, найденные в программах, пожелания<br>пользователей, а также следить за процессом устранения этих<br>ошибок и выполнения или невыполнения пожеланий.')" onmouseout="hide()"><strong>Bug tracker</strong></a> - здесь можно прочитать, а также и написать о замеченных ошибках JSFiddle.</div>
+<div class=list><a href="https://trello.com/b/LakLkQBW/jsfiddle-roadmap" target="_blank" onmouseover="show('road map (дорожная карта) – это наглядное представление пошагового сценария<br>развития определенного объекта – отдельного продукта, класса продуктов,<br>некоторой технологии, группы смежных технологий, бизнеса, компании,<br>объединяющей несколько бизнес-единиц, целой отрасли, индустрии и даже<br>плана достижения политических, социальных и т.д. целей, например,<br>урегулирования международных конфликтов и борьбы с особо опасными<br>заболеваниями.')" onmouseout="hide()"><strong>Roadmap</strong></a> (vote for features) - дорожная карта (голосуй за функции). Здесь можно ознакомиться с новыми идеями, узнать какие функции приняты в выполнению, а какие отклонены, что сделано и как идет процесс выполнения. Также здесь можно проголосовать за полезные, на ваш взгляд, функции или против ненужных, по вашему мнению.</div>
+<div class=list><a href="https://jsfiddle.net/about" target="_blank"><strong>About</strong></a> - кратко о JSFiddle и его авторах. Перевод на русский язык этой заметки размещен во &#171;<a href="intro.htm" onmouseover="show('Введение')" onmouseout="hide()">Введении</a>&#187; этой справки.</div>
+<div class=list><a href="https://docs.jsfiddle.net/" target="_blank"><strong>Docs</strong></a> - ссылка на оригинальную версию (на английском языке) данной справки.</div>
+<div class=list><a href="http://status.jsfiddle.net/" target="_blank"><strong>Service status</strong></a> - состояние службы.</div>
+</td></tr>
+</table>
+
+<br><br>
+</body></html>

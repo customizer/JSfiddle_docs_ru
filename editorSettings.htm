@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<title>JSFiddle документация</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="1.css">
+<script type="text/javascript" src="1.js"></script>
+</head>
+
+<body>
+<img src="img/setting.png" width=40% align=right>
+<h1>Настройки редактора</h1>
+
+Кнопка вызова настроек <span class="btn">Settings</span> находится справа на панели действий.<br><br>
+Верхнее поле в окне настроек отвечает за настройку макета рабочей области JSFiddle - <strong>Editor layout</strong> (Макет редактора). Значение по умолчанию - <strong>Classic</strong>, классический макет, представляющий собой сетку 2&#215;2. Подробнее <a href="#layout">смотрите ниже</a>.<br><br>
+На втором поле - общие настройки редактора - <strong>General</strong>.
+Здесь можно выбрать:<br>
+<div class=list>тему внешнего вида редактора (<strong>Dark theme</strong> - темная тема (значение по умолчанию), если этот пункт не включить будет светлая тема - Light),</div>
+<div class=list>указать или не указывать номера строк кода (<strong>Line numbers</strong>) - по умолчанию включено, т.е. номера строк будут показаны,</div>
+<div class=list>переносить или нет длинные строки (<strong>Wrap lines</strong>) - по умолчанию длинные строки переносятся,</div>
+<div class=list><strong>Indent with tabs</strong> - отступы с табуляцией. По умолчанию отключено.</div>
+<div class=list><strong>Code hinting (autocomplete) (beta)</strong> - подсказки кода и автозавершение (как пробная версия). По умолчанию отключено.</div><br>
+Также здесь есть три параметра по оформлению кода:
+<div class=list><strong>Indent size</strong> - размер отступа слева, есть три значения:<br>
+<strong>2 spaces</strong> - т.е. отступ в 2 символа (значение по умолчанию),<br>
+<strong>3 spaces</strong> - 3 символа и<br>
+<strong>4 spaces</strong> - 4 символа.</div>
+<div class=list><strong>Key map</strong> - карта команд с клавиатуры<br>
+<strong>Default</strong> - т.е. значение по умолчанию,<br>
+<strong><a href="https://ru.wikipedia.org/wiki/Sublime_Text" target="_blank" onmouseover="show('Sublime Text ([səˈblʌɪm tɛkst]) — проприетарный текстовый редактор.<br>Поддерживает плагины на языке программирования Python.')" onmouseout="hide()">Sublime Text</a></strong> - в стиле текстового редактора Sublime Text,<br>
+<strong><a href="https://ru.wikipedia.org/wiki/Emacs" target="_blank" onmouseover="show('Emacs (Имакс, Емакс, также Емакс) — семейство многофункциональных<br>расширяемых текстовых редакторов.')" onmouseout="hide()">EMACS</a></strong> - в стиле текстового редактора EMACS.</div>
+<div class=list><strong>Font size</strong> (размер шрифта), можно выбрать одно из следующих значений:<br>
+<strong>Default</strong> - т.е. значение по умолчанию,<br>
+<strong>Big</strong> - крупный шрифт,<br>
+<strong>Bigger</strong> - большущий шрифт (крупнее чем Big) и<br>
+<strong>Jabba</strong> - самый крупный шрифт.</div><br>
+Третье поле - <strong>Behavior</strong> (поведение редактора). Здесь имеются следующие настройки:
+<div class=list><strong>Auto-run code</strong> - автоматический запуск кода на выполнение. По умолчанию отключен.</div>
+<div class=list><strong>Only auto-run code that validates</strong> - автоматический запуск на выполнение только проверенного кода. По умолчанию отключен.</div>
+<div class=list><strong>Auto-save code (bumps the version)</strong> - автоматическое сохранение кода (увеличивает номер версии). По умолчанию отключено.</div>
+<div class=list><strong>Auto-close HTML tags</strong> - автоматическое закрытие HTML-тегов. По умолчанию включено.</div>
+<div class=list><strong>Auto-close brackets</strong> - автоматическое закрытие скобок. По умолчанию включено.</div>
+
+<div class=list><strong>Clear console on run</strong> - очистка консоли при запуске кода. По умолчанию отключено.</div>
+
+<div class=list><strong>Live code validation</strong> - проверка кода во время его написания. По умолчанию включено.</div>
+
+<div class=list><strong>Highlight matching tags</strong> - выделение парных HTML-тегов (подчеркиванием). По умолчанию отключено.</div>
+
+<br><br>
+Последнее, самое нижнее поле отвечает за панель шаблонов - <strong>Boilerplates</strong>. В ней всего один пункт - <strong>Show boilerplate bar less often</strong> (Показывать панель шаблонов пореже).
+<br>
+
+<h3 id="layout">Макеты и темы</h3>
+JSFiddle позволяет переключать раскладку редактора с классической сетки 2&#215;2 на то, что соответствует вашим потребностям.<br>
+Размеры каждой ячейки сетки можно изменять по ширине и высоте. Кроме того, при изменении размера панели результата (Result) показывается её ширина в пикселах (удобно для работы с медиа запросами).<br>
+Классический макет рабочей области - <strong>Classic</strong> (значение по умолчанию)<br>
+<table border=1 width=40% style="border-collapse:collapse; border-style:solid; border-color:#808080; height:10em;">
+<tr valign=top><td>&nbsp;HTML</td><td>&nbsp;CSS</td></tr>
+<tr valign=top><td>&nbsp;JS</td><td>&nbsp;Result</td></tr>
+</table>
+Имеется макет с четырьмя колонками - <strong>Columns</strong>,
+<table border=1 width=40% style="border-collapse:collapse; border-style:solid; border-color:#808080; height:10em;">
+<tr valign=top><td width=25%>&nbsp;HTML</td><td width=25%>&nbsp;CSS</td><td width=25%>&nbsp;JS</td><td width=25%>&nbsp;Result</td></tr>
+</table>
+с тремя колонками и панелью результата внизу - <strong>Bottom results</strong>,
+<table border=1 width=40% style="border-collapse:collapse; border-style:solid; border-color:#808080; height:10em;">
+<tr valign=top><td width=33%>&nbsp;HTML</td><td width=33%>&nbsp;CSS</td><td width=33%>&nbsp;JS</td></tr>
+<tr valign=top><td colspan=3>&nbsp;Result</td></tr>
+</table>
+а также с тремя рядами с левой стороны и панелью результата справа - <strong>Right results</strong>.
+<table border=1 width=40% style="border-collapse:collapse; border-style:solid; border-color:#808080; height:10em;">
+<tr valign=top><td width=60%>&nbsp;HTML</td><td rowspan=3 width=40%>&nbsp;Result</td></tr>
+<tr valign=top><td>&nbsp;CSS</td></tr>
+<tr valign=top><td>&nbsp;JS</td></tr>
+</table>
+Кроме того, имеется два режима вкладок: вкладки по колонкам <strong>Tabs (columns)</strong> (вкладки можно перетаскивать, меняя их местами) и панелью результата справа.<br>
+<span class="btn">HTML</span><span class="btn">CSS</span><span class="btn">JS</span>
+<table border=1 width=40% style="border-collapse:collapse; border-style:solid; border-color:#808080; height:10em;">
+<tr valign=top><td width=60%>&nbsp;HTML</td><td width=40%>&nbsp;Result</td></tr>
+</table>
+и вкладки по рядам <strong>Tabs (rows)</strong> (вкладки также можно перетаскивать), панель результата будет внизу.<br>
+<span class="btn">HTML</span><span class="btn">CSS</span><span class="btn">JS</span>
+<table border=1 width=40% style="border-collapse:collapse; border-style:solid; border-color:#808080; height:10em;">
+<tr valign=top height=50%><td>&nbsp;HTML</td></tr>
+<tr valign=top><td>&nbsp;Result</td></tr>
+</table>
+<br><br>
+
+<br><br>
+</body></html>

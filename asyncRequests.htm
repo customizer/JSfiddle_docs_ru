@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<title>JSFiddle документация</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="1.css">
+<script type="text/javascript" src="1.js"></script>
+</head>
+
+<body>
+<h1>Асинхронные запросы</h1>
+Для улучшения пользовательских экспериментов были созданы функции Echo. Они позволяют создавать асинхронные запросы, добавлять javascript-файлы, создавать "работников" - все из одного проекта, так что он стал более прозрачен для чтения кода пользователем.
+To improve user experience Echo features has been created. This allows to test asynchronous requests, add javascript files, create workers - all from one fiddle, so it is more transparent for the user reading the code.<br><br>
+Асинхронные запросы разделяются на HTML, JSON, JSONP и XML. Ответы Gist и GitHub  похожи на функцию echo и хорошо работают в паре с сохранением проектов в gist и GitHub.
+Asynchronous requests are split to HTML, JSON, JSONP and XML. Gist and github responses are similar to the echo feature and go nicely in pair with storing fiddles in gist and github.<br><br>
+
+<!-- Метод GET используется для запроса содержимого указанного ресурса. С помощью метода GET можно также начать какой-либо процесс. В этом случае в тело ответного сообщения следует включить информацию о ходе выполнения процесса.
+
+Клиент может передавать параметры выполнения запроса в URI целевого ресурса после символа «?»:
+GET /path/resource?param1=value1&param2=value2 HTTP/1.1
+
+Согласно стандарту HTTP, запросы типа GET считаются идемпотентными[4]
+
+Кроме обычного метода GET, различают ещё
+
+    Условный GET — содержит заголовки If-Modified-Since, If-Match, If-Range и подобные;
+    Частичный GET — содержит в запросе Range.
+
+Порядок выполнения подобных запросов определён стандартами отдельно.
+
+
+
+Метод POST применяется для передачи пользовательских данных заданному ресурсу. Например, в блогах посетители обычно могут вводить свои комментарии к записям в HTML-форму, после чего они передаются серверу методом POST и он помещает их на страницу. При этом передаваемые данные (в примере с блогами — текст комментария) включаются в тело запроса. Аналогично с помощью метода POST обычно загружаются файлы на сервер.
+
+В отличие от метода GET, метод POST не считается идемпотентным[4], то есть многократное повторение одних и тех же запросов POST может возвращать разные результаты (например, после каждой отправки комментария будет появляться очередная копия этого комментария).
+
+При результате выполнения 200 (Ok) в тело ответа следует включить сообщение об итоге выполнения запроса. Если был создан ресурс, то серверу следует вернуть ответ 201 (Created) с указанием URI нового ресурса в заголовке Location.
+
+Сообщение ответа сервера на выполнение метода POST не кэшируется.  -->
+
+<h3>HTML</h3>
+<pre>URL: /echo/html/</pre>
+<div class=note><span style="font-size:2em; background-color:#00bfff; color:#ffffff;">&nbsp;&#9432;&nbsp;</span>&nbsp; Данные должны предоставляться с помощью <a href="https://ru.wikipedia.org/wiki/POST_(HTTP)" target="_blank">POST</a>.</div>
+<table class="tbl_1" border="1" cellpadding="5" style="margin-left:3em;">
+<tr class="head1"><td><br><span style="font-size:0.8em;">Option key</span></td><td>Описание<br><span style="font-size:0.8em;">Description</span></td></tr>
+<tr><td>html</td><td>Данные должны предоставляться с помощью <a href="https://ru.wikipedia.org/wiki/POST_(HTTP)" target="_blank">POST</a>.</td></tr>
+<tr><td>delay</td><td>Это время в секундах, по истечении которых должны быть возвращены данные (дополнительный, необязательный параметр).</td></tr>
+</table><br><br>
+<div style="font-family:Segoe UI; font-size:90%; margin-left:10px;">
+&nbsp; &nbsp; &nbsp; <span class="lnk" onclick='javascript:show_img("rect1","rect2","rect3","rect4","rect5");'>JavaScript</span>
+&nbsp; &nbsp; <span class="lnk" onclick='javascript:show_img("rect2","rect1","rect3","rect4","rect5");'>HTML</span>
+&nbsp; &nbsp; <span class="lnk" onclick='javascript:show_img("rect3","rect1","rect2","rect4","rect5");'>CSS</span>
+&nbsp; &nbsp; <span class="lnk" onclick='javascript:show_img("rect4","rect1","rect2","rect3","rect5");'>Result</span>
+&nbsp; &nbsp; <span class="lnk" onclick='javascript:show_img("rect5","rect1","rect2","rect3","rect4");'>Resources</span>
+<span style="float:right; margin-right:20px;"><a href="https://jsfiddle.net/6he52mnr/1/?utm_source=website&utm_medium=embed&utm_campaign=6he52mnr" target="_blank">Редактировать в JSFiddle</a></span>
+
+<div id="rect1" style="height:260px; background-color:#fff; display:block; margin:0px; padding:0px;">
+<hr class="underline" style="margin-left:25px; width:55px;">
+<pre>fetch("/echo/html/", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded; charset=utf-8"
+  },
+  body: "html=&#60;a href='#'&#62;hello world&#60;/a&#62;"
+})
+.then((response) => response.text())
+.then((responseText) => {
+  document.querySelector("#result").innerHTML = responseText
+})
+.catch((error) => {
+  console.error(error)
+})</pre></div>
+
+<div id="rect2" style="height:260px; background-color:#eee; display:none; margin:0px; padding:0px;">
+<hr class="underline" style="margin-left:100px; width:35px;">
+<pre>&#60;h3>HTML:&#60;/h3&#62;
+&#60;p id="result"&#62;&#60;/p&#62;</pre></div>
+
+<div id="rect3" style="height:260px; background-color:#eee; display:none; margin:0px; padding:0px;">
+<hr class="underline" style="margin-left:150px; width:30px;">
+<pre>p {
+  padding: 10px;
+}
+
+p {
+  margin: 5px;
+  border: 1px dotted #999;
+}</pre></div>
+
+<div id="rect4" style="height:260px; background-color:#eee; display:none; margin:0px; padding:0px;">
+<hr class="underline" style="margin-left:195px; width:40px;">
+&nbsp; <strong>HTML:</strong><br>
+
+&nbsp;&nbsp; <a href="#" onclick="return false">hello world</a></div>
+
+<div id="rect5" style="height:260px; background-color:#eee; display:none; margin:0px; padding:0px;">
+<hr class="underline" style="margin-left:250px; width:65px;">
+<pre>
+External resources loaded into this fiddle:
+
+    mootools-core.min.js
+    mootools-more-compressed.js</pre></div>
+</div><br><br>
+
+
+<h3>JSON</h3>
+<div class=note><span style="font-size:2em; background-color:#00bfff; color:#ffffff;">&nbsp;&#9432;&nbsp;</span>&nbsp; Данные должны предоставляться с помощью <a href="https://ru.wikipedia.org/wiki/POST_(HTTP)" target="_blank">POST</a>.</div>
+<pre>URL: /echo/json/</pre>
+<table class="tbl_1" border="1" cellpadding="5" style="margin-left:3em;">
+<tr class="head1"><td><br><span style="font-size:0.8em;">Option key</span></td><td>Описание<br><span style="font-size:0.8em;">Description</span></td></tr>
+<tr><td>json</td><td>JSON string representing the object jsFiddle should return. It has to be valid JSON or error will be returned</td></tr>
+<tr><td>delay</td><td>Это время в секундах, по истечении которых должны быть возвращены данные (дополнительный, необязательный параметр).</td></tr>
+</table><br><br>
+
+[Missing embed]<br><br>
+
+<h3>JSONP</h3>
+<div class=note><span style="font-size:2em; background-color:#00bfff; color:#ffffff;">&nbsp;&#9432;&nbsp;</span>&nbsp; Данные должны предоставляться с помощью <a href="https://ru.wikipedia.org/wiki/POST_(HTTP)" target="_blank">POST</a>.
+JSFiddle will respond all data given in request. It uses URL with host and protocol as it’s loaded from different domain.
+<tt>callback</tt> и <tt>delay</tt> не возвращаются.</div>
+
+<pre>URL: https://jsfiddle.net/echo/jsonp/</pre>
+<table class="tbl_1" border="1" cellpadding="5" style="margin-left:3em;">
+<tr class="head1"><td><br><span style="font-size:0.8em;">Option key</span></td><td>Описание<br><span style="font-size:0.8em;">Description</span></td></tr>
+<tr><td>callback</td><td>имя функции <tt>jsonp</tt></td></tr>
+<tr><td>delay</td><td>Это время в секундах, по истечении которых должны быть возвращены данные (дополнительный, необязательный параметр).</td></tr>
+</table><br><br>
+
+[Missing embed]<br><br>
+
+<h3>XML</h3>
+<div class=note><span style="font-size:2em; background-color:#00bfff; color:#ffffff;">&nbsp;&#9432;&nbsp;</span>&nbsp; Данные должны предоставляться с помощью <a href="https://ru.wikipedia.org/wiki/POST_(HTTP)" target="_blank">POST</a>.</div>
+<pre>URL: /echo/xml/</pre>
+<table class="tbl_1" border="1" cellpadding="5" style="margin-left:3em;">
+<tr class="head1"><td><br><span style="font-size:0.8em;">Option key</span></td><td>Описание<br><span style="font-size:0.8em;">Description</span></td></tr>
+<tr><td>xml</td><td>Valid string representing XML code</td></tr>
+<tr><td>delay</td><td>Это время в секундах, по истечении которых должны быть возвращены данные (дополнительный, необязательный параметр).</td></tr>
+</table><br><br>
+
+[Missing embed]
+
+<br><br>
+</body></html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<title>JSFiddle документация</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="1.css">
+<script type="text/javascript" src="1.js"></script>
+</head>
+<body>
+<h1>Отображение проекта по методу POST</h1>
+Имеется возможность показать проект, который не сохранен в JSFiddle, при помощи метода POST из стороннего источника.
+
+<h3>Структура URL-адреса</h3>
+<div class=list><code>framework</code> – название нужного фреймворка. Каковой фреймворк должен быть загружен вместе с проектом.</div>
+<div class=list><code>version</code> – часть строки версии фреймворка - будет использоваться последний проход поиска. Если будет задано 1.3, JSFiddle будет использовать последний результат поиска, т.е. будет отдано предпочтение версии 1.3.2 относительно 1.3.1 и 1.3 версий.</div>
+<div class=list><code>dependency_list</code> – части строк, составляющих список зависимостей, разделенные запятой.</div>
+
+<h4>Фреймворк</h4>
+Загружаемый фреймворк (или его отсутствие) должен быть указан в строке URL-адреса, например:
+<pre>jsfiddle.net/api/post/{framework}/{version}</pre>
+Если фреймворк не используется, следует указать <tt>library/pure</tt>, например:
+<pre>jsfiddle.net/api/post/library/pure/</pre>
+
+<h4>Зависимости</h4>
+Существует возможность добавления зависимостей в виде списка зависимостей, разделенных запятой:
+<pre>jsfiddle.net/api/post/{framework}/{version}/dependencies/{dependency_list}/</pre>
+
+<h3>Переменные POST</h3>
+Все поля дополнительны, необязательны. Если никаких данных не предоставлено, будут использоваться настройки нового проекта.<br>
+<a href="https://ru.wikipedia.org/wiki/POST_(HTTP)" target="_blank"><span style="display:inline-block; color:#ffffff; background-color:#3cb371; padding:5px 15px; border-width:1px; border-radius:1em; margin:0.5em;">метод POST</span></a>
+​
+<pre>https://jsfiddle.net<strong>/api/post/:framework/:version/dependencies/:dependency_list/</strong></pre><br>
+<div class=note><span style="font-size:2em; background-color:#00bfff; color:#ffffff;">&nbsp;&#9432;&nbsp;</span>&nbsp; Пример:
+<tt><a href="http://jsfiddle.net/3Lwgk4c5/" target="_blank">http://jsfiddle.net/3Lwgk4c5/</a></tt></div><br>
+<div style="font-family:Segoe UI; font-size:90%; margin-left:10px;">
+&nbsp; &nbsp; &nbsp; <span class="lnk" onclick='javascript:show_img("rect1","rect2");'>Запрос (Request)</span>
+&nbsp; &nbsp; <span class="lnk" onclick='javascript:show_img("rect2","rect1");'>Ответ (Response)</span>
+<div id="rect1" style="background-color:#fff; display:block; margin:0px; padding:0px;">
+<hr class="underline" style="margin-left:25px; width:100px;">
+<div style="font-size:120%;">Параметры данных формы (Form Data Parameters)</div>
+<table cellpadding=10>
+<tr valign=top><td><code>normalize_css</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>string</tt></td><td><tt>yes</tt> или <tt>no</tt> - файл <tt>normalize.css</tt> должен быть загружен.</td></tr>
+<tr valign=top><td><code>wrap</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>string</tt></td><td>Устанавливает упаковку JS-кода: Возможные значения:
+<div style="height:5em; overflow:auto;">
+- <tt>l</tt> код упаковывается так, что он будет запущен по событию окна <tt>onload</tt>, т.е. когда загрузилась вся страница, включая стили, картинки и другие ресурсы.<br>
+- <tt>d</tt> код упаковывается так, что он будет запущен по событию окна <tt>onDomReady</tt>, т.е. когда браузер полностью загрузил HTML, было построено DOM-дерево, но внешние ресурсы, такие как картинки &#60;img&#62; и стили, могут быть ещё не загружены.<br>
+- <tt>h</tt> код JavaScript не упаковывается и размещается внутри и внизу тега &#60;head&#62;, т.е. пока не будет выполнен скрипт, содержимое страницы не будет показано.<br>
+- <tt>b</tt> код JavaScript не упаковывается и размещается внутри и внизу тега &#60;body&#62;, т.е. вначале показывается страница, а затем выполняется скрипт.</div></td></tr>
+<tr valign=top><td><code>html</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>string</tt></td><td>код панели HTML</td></tr>
+<tr valign=top><td><code>css</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>string</tt></td><td>код панели CSS</td></tr>
+<tr valign=top><td><code>js</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>string</tt></td><td>код панели JS</td></tr>
+<tr valign=top><td><code>html_panel</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>integer</tt></td><td>язык панели HTML (допустимо только значение <tt>0</tt>).</td></tr>
+<tr valign=top><td><code>css_panel</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>integer</tt></td><td>язык панели CSS.<br>Принимается: значение <tt>0</tt> для CSS и значение <tt>1</tt> для SCSS</td></tr>
+<tr valign=top><td><code>js_panel</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>integer</tt></td><td>язык панели JS. Возможные значения:
+<div style="height:5em; overflow:auto;">
+- <tt>0</tt> для JavaScript<br>
+- <tt>1</tt> для CoffeeScript<br>
+- <tt>2</tt> для JavaScript 1.7<br>
+- <tt>3</tt> для</div></td></tr>
+<tr valign=top><td><code>title</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>string</tt></td><td>название проекта.</td></tr>
+<tr valign=top><td><code>description</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>string</tt></td><td>описание проекта.</td></tr>
+<tr valign=top><td><code>dtd</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>string</tt></td><td>Определение типа документов.<br>Принимается часть строки выбранного <a href="https://ru.wikipedia.org/wiki/DTD" target="_blank" onmouseover="show('DTD (от англ. слов Document Type Definition — определение типа документа).<br>DTD описывает схему документа для конкретного языка разметки посредством<br>набора объявлений (объектов-параметров, элементов и атрибутов), которые<br>описывают его класс (или тип) с точки зрения синтаксических ограничений<br>этого документа.')" onmouseout="hide()">DTD</a> (то есть, HTML 4).</td></tr>
+<tr valign=top><td><code>resources</code><br><span style="font-size:80%;">(дополнительный,<br>необязательный<br>параметр)</span></td><td><tt>string</tt></td><td>список внешних ресурсов, разделенных запятой.</td></tr>
+</table>
+</div>
+<div id="rect2" style="display:none; margin:0px; padding:0px;">
+<hr class="underline" style="margin-left:145px; width:100px;">
+<span style="color:#00ff00;">&#9210;</span> 200: OK
+<pre><br><br><br></pre></div></div>
+
+
+<br><br>
+</body></html>

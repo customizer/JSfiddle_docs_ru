@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<title>JSFiddle документация</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="1.css">
+<script type="text/javascript" src="1.js"></script>
+</head>
+
+<body>
+<h1>Отображение проекта JSFiddle из Gist</h1>
+Демонстрация считывается из Github Gist и представляется как проект.
+<!--
+Github: A hosting service that houses a web-based git repository. ... Gist: Is an additional feature added to github to allow the sharing of code snippets, notes, to do lists and more. You can save your Gists as secret or public. Secret Gists are hidden from search engines but visible to anyone you share the url with.
+Every gist is a Git repository, which means that it can be forked and cloned. If you are signed in to GitHub when you create a gist, the gist will be associated with your account and you will see it in your list of gists when you navigate to your gist home page. Gists can be public or secret.
+-->
+
+
+<h3>Структура файлов Gist</h3>
+
+<pre><br>fiddle.js
+fiddle.html
+fiddle.css
+fiddle.manifest<br><br></pre>
+<table class="tbl_1" border="1" cellpadding="5" width=90% style="margin-left:3em;">
+<tr class="head1"><td>Название поля<br><span style="font-size:0.8em;">File name</span></td><td>Описание<br><span style="font-size:0.8em;">Description</span></td></tr>
+<tr><td>fiddle.[js/html/css]</td><td>содержит код проекта указанной панели.</td></tr>
+<tr><td>fiddle.manifest</td><td>YAML description of the Gist for JSFiddle to parse</td></tr>
+</table><br><br>
+
+<h4>Пример файла <tt>manifest</tt> ()</h4>
+
+<pre><br>name: The Name of the Fiddle (название проекта JSFiddle)
+description: Some description, please keep it in one line (некое описание, следует уложиться в одну строку)
+authors:
+  - John Doe
+  - Jan Wisniewski
+resources:
+  - http://some.url.com/some/file.js
+  - http://other.url.com/other_filename.css
+normalize_css: no
+wrap: b
+panel_js: 1
+panel_css: 1<br><br></pre>
+<div class=note><span style="font-size:2em; background-color:#00bfff; color:#ffffff;">&nbsp;&#9432;&nbsp;</span>&nbsp; Все поля необязательны.</div><br>
+
+<h4>Поля файла <tt>manifest</tt></h4>
+<div class=list><code>panel_html</code> – язык HTML панели. Допускаемые возможные значения:<br>
+&nbsp; &nbsp; &nbsp; <code>0</code> – HTML</div><br>
+
+<div class=list><code>panel_css</code> – язык CSS панели. Допускаемые возможные значения:<br>
+&nbsp; &nbsp; &nbsp; <code>0</code> – CSS<br>
+&nbsp; &nbsp; &nbsp; <code>1</code> – SCSS</div><br>
+
+<div class=list><code>panel_js</code> – язык JS панели. Допускаемые возможные значения:<br>
+&nbsp; &nbsp; &nbsp; <code>0</code> – JavaScript<br>
+&nbsp; &nbsp; &nbsp; <code>1</code> – CoffeeScript<br>
+&nbsp; &nbsp; &nbsp; <code>2</code> – JavaScript 1.7</div><br>
+
+<div class=list><code>resources</code> – список внешних ресурсов.</div><br>
+<div class=list><code>name</code> – название проекта.</div><br>
+<div class=list><code>description</code> – описание проекта.</div><br>
+
+<div class=list><code>normalize_css</code> – Normalize CSS by loading normalize.css before any CSS declarations.<br>
+&nbsp; &nbsp; &nbsp; <code>yes</code> – пормализовать<br>
+&nbsp; &nbsp; &nbsp; <code>no</code> – не нормализовывать</div><br>
+
+<div class=list><code>wrap</code> – Set the JS code wrap. Options:<br>
+&nbsp; &nbsp; &nbsp; <code>l</code> – On load<br>
+&nbsp; &nbsp; &nbsp; <code>d</code> – On DOM ready</div><br>
+
+<table class="tbl_1" border="1" cellpadding="5" width=90% style="margin-left:3em;">
+<tr class="head1"><td>Поле<br><span style="font-size:0.8em;">Field</span></td><td>Описание<br><span style="font-size:0.8em;">Description</span></td></tr>
+<tr><td>name</td><td></td></tr>
+<tr><td>description</td><td></td></tr>
+<tr><td>normalize_css</td><td></td></tr>
+</table><br><br>
+
+<br><br>
+</body></html>

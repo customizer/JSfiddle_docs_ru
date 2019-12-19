@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<title>JSFiddle документация</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="1.css">
+<script type="text/javascript" src="1.js"></script>
+</head>
+
+<body>
+<h1>Начало работы</h1>
+Как начать работать с JSFiddle.
+<h3>Новый <span class="lnk" onmouseover="show('здесь он называется &#171;фидл&#187; от англ. слова fiddle - скрипка,<br>играть на скрипке, можно грубо сказать &#171;пиликать&#187; на скрипке.<br>Отсюда, название проекта можно перевести как &#171;запиливание<br>на джаваскрипте&#187;, т.е. пробный проект для проверки работы<br>JS-скрипта, а сам проект (т.е. фидл) можно перевести как<br>&#171;пиликалка&#187;.')" onmouseout="hide()">проект</span> (fiddle) или шаблон (boilerplate)</h3>
+Открытие страницы пустого проекта дает возможность начать проект "с нуля" или создать его из имеющихся шаблонов - "бойлерплейтов":
+<div class="caption"><img src="img/new_fiddle.png" width=90%><br></div>
+Рассмотрим панель шаблонов поподробнее:
+<div class="caption"><img src="img/boilerplate.png" width=90%><br></div><br>
+Слева видим кнопку закрытия панели шаблонов. Правее находится целое поле выбора шаблонов с определенными библиотеками JS
+(<a href="https://ru.wikipedia.org/wiki/JQuery" target="_blank" onmouseover="show('jQuery ([dʒeɪ kwɪəri]) — набор функций JavaScript, фокусирующийся на<br>взаимодействии JavaScript и HTML. Библиотека jQuery помогает легко<br>получать доступ к любому элементу DOM, обращаться к атрибутам и<br>содержимому элементов DOM, манипулировать ими. Также библиотека<br>jQuery предоставляет удобный API для работы с AJAX.')" onmouseout="hide()">jQuery</a>,
+<a href="https://ru.wikipedia.org/wiki/Vue.js" target="_blank" onmouseover="show('Vue.js (также Vue; /vjuː/) — JavaScript-фреймворк с открытым исходным<br>кодом для создания пользовательских интерфейсов. Легко интегрируется<br>в проекты с использованием других JavaScript-библиотек.<br>Может функционировать как веб-фреймворк для разработки<br>одностраничных приложений в реактивном стиле.')" onmouseout="hide()">Vue</a>,
+<a href="https://ru.wikipedia.org/wiki/React" target="_blank" onmouseover="show('React (иногда React.js или ReactJS) — JavaScript-библиотека с открытым<br>исходным кодом для разработки пользовательских интерфейсов.<br>React может использоваться для разработки одностраничных и<br>мобильных приложений. Его цель — предоставить высокую скорость<br>простоту и масштабируемость.')" onmouseout="hide()">React</a>,
+<a href="https://ru.wikipedia.org/wiki/React#JSX" target="_blank" onmouseover="show('JavaScript XML (JSX) — это расширение синтаксиса JavaScript,<br>которое позволяет использовать похожий на HTML синтаксис<br>для описания структуры интерфейса. Как правило, компоненты<br>написаны с использованием JSX, но также есть возможность<br>использования обычного JavaScript.')" onmouseout="hide()">React + JSX</a>,
+<a href="https://preactjs.com/" target="_blank" onmouseover="show('Preact – это JavaScript библиотека, которая позиционирует себя<br>как быстрая (3кб) альтернатива React (45кб) с такой же API.')" onmouseout="hide()">Preact</a>,
+<a href="https://ru.wikipedia.org/wiki/TypeScript" target="_blank" onmouseover="show('TypeScript — язык программирования, представленный Microsoft в 2012 году<br>и позиционируемый как средство разработки веб-приложений, расширяющее<br>возможности JavaScript.<br>TypeScript является обратно совместимым с JavaScript и компилируется в<br>последний. Фактически, после компиляции программу на TypeScript можно<br>выполнять в любом современном браузере или использовать совместно<br>с серверной платформой Node.js.<br>TypeScript отличается от JavaScript возможностью явного статического<br>назначения типов, поддержкой использования полноценных классов (как в<br>традиционных объектно-ориентированных языках), а также поддержкой<br>подключения модулей, что призвано повысить скорость разработки,<br>облегчить читаемость, рефакторинг и повторное использование кода,<br>помочь осуществлять поиск ошибок на этапе разработки и компиляции, и,<br>возможно, ускорить выполнение программ.')" onmouseout="hide()">TypeScript</a>,
+<a href="https://ru.wikipedia.org/wiki/CoffeeScript" target="_blank" onmouseover="show('CoffeeScript ([’kɔ:fɪ skrɪpt]; кофи скрипт) — язык программирования,<br>транслируемый в JavaScript. CoffeeScript добавляет синтаксический<br>сахар в духе Ruby, Python, Haskell и Erlang для того, чтобы улучшить<br>читаемость кода и уменьшить его размер. CoffeeScript позволяет<br>писать более компактный код по сравнению с JavaScript.')" onmouseout="hide()">CoffeeScript</a>)    &nbsp;
+и CSS (<a href="https://ru.wikipedia.org/wiki/Sass" target="_blank" onmouseover="show('Sass (Syntactically Awesome Stylesheets) — модуль, включенный в Haml.<br>Sass — это метаязык на основе CSS, предназначенный для увеличения<br>уровня абстракции CSS кода и упрощения файлов каскадных таблиц стилей.<br>Язык Sass имеет два синтаксиса:<div class=list>sass — отличается отсутствием фигурных скобок, в нём<br>вложенные элементы реализованы с помощью отступов;</div><div class=list>SCSS (Sassy CSS) — использует фигурные скобки, как и сам CSS.</div>')" onmouseout="hide()">SCSS</a>,
+<a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout" target="_blank">CSS Grid (responsive)</a>,
+<a href="https://ru.wikipedia.org/wiki/Bootstrap_(%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA)" target="_blank" onmouseover="show('Bootstrap (также известен как Twitter Bootstrap) — свободный набор<br>инструментов для создания сайтов и веб-приложений. Включает в себя<br>HTML- и CSS-шаблоны оформления для типографики, веб-форм, кнопок,<br>меток, блоков навигации и прочих компонентов веб-интерфейса,<br>включая JavaScript-расширения.<br>Bootstrap использует современные наработки в области CSS и HTML,<br>поэтому необходимо быть внимательным при поддержке старых<br>браузеров.')" onmouseout="hide()">Bootstrap</a>,
+<a href="https://ru.wikipedia.org/wiki/PostCSS" target="_blank" onmouseover="show('PostCSS — программа, которая автоматизирует рутинные операции с CSS<br>при помощи расширений, написанных на языке JavaScript. Используется<br>при разработке Википедии, Facebook и GitHub.<br>В отличие от Sass и LESS, PostCSS не является языком шаблонов,<br>компилируемых в CSS. PostCSS — платформа, на которой можно создать<br>разные инструменты работы CSS. В частности, на PostCSS можно создать<br>и язык шаблонов, такой как Sass и LESS.<br>Ядро PostCSS состоит из:<div class=list>парсера CSS, который генерирует дерево объектов (AST)<br>&nbsp; &nbsp; из строки CSS-кода;</div><div class=list>набора классов, из которого состоит это дерево;</div><div class=list>генератора CSS, который генерирует строку CSS<br>&nbsp; &nbsp; по дереву объектов;</div><div class=list>генератора карт кода для сделанных в CSS изменений.</div>')" onmouseout="hide()">PostCSS</a>).
+Надпись над ними "Start with a boilerplate" означает - Начать работу с шаблоном.
+Ниже поля выбора библиотек находится кнопка "Show boilerplate bar less often?" - "Показывать панель шаблонов пореже?".
+Клик по ней приведет к закрытию панели шаблонов и для зарегистрированных пользователей, вошедших в систему, она перестанет появляться при каждом включении.
+<br><br>
+<h3>Ввод кода и запуск его в работу<br><span style="font-size:0.8em;">(Entering and running code)</span></h3>
+JSFiddle представлен панелями (panel) или вкладками (tab), при переходе на макет вкладок. Имеются четыре панели, в трех из них можно вводить код, а в четвертой будет виден результат работы кода. Вместе они составляют рабочую область проекта.
+
+<div class=list><strong>HTML</strong> - код структуры документа, не нужно добавлять теги <tt>&#60;body&#62;</tt>, <tt>&#60;doctype&#62;</tt>, <tt>&#60;head&#62;</tt>, они добавляются автоматически.</div>
+<div class=list><strong>CSS</strong> - таблица стилей. Можно подключить <a href="https://ru.wikipedia.org/wiki/Sass" target="_blank" onmouseover="show('Для Sass доступны два синтаксиса. Первое, известное как SCSS (Sassy CSS)<br>и используемое в этой ссылке, является расширением синтаксиса CSS. Это<br>означает, что каждая действительная таблица стилей CSS является допустимым<br>файлом SCSS с тем же значением. Этот синтаксис улучшен функциями Sass,<br>описанными ниже.<br>Файлы, использующие этот синтаксис, имеют расширение <tt>.scss</tt>.<br><br>Второй и более старый синтаксис, известный как синтаксис с отступом (или<br>иногда просто &#34;Sass&#34;), обеспечивает более лаконичный способ написания CSS.<br>Он использует отступ, а не скобки для обозначения вложенности селекторов,<br>и символы новой строки, а не точки с запятой для разделения свойств.<br>Файлы, использующие этот синтаксис, имеют расширение <tt>.sass</tt>.')" onmouseout="hide()">препроцессор SCSS</a>.</div>
+<div class=list><strong>JavaScript</strong> - поведение. Имеется множество фреймворков и препроцессоров кода, которые можно использовать.</div>
+После ввода кода, просто нажмите кнопку <span class="btn">&#9655; Run</span> (выполнить) в верхней панели действий и на четвертой панели появится результат.
+<div class="caption"><img src="img/window.png" width=90%><br></div><br>
+
+<h3>Панель действий</h3>
+Вот так выглядит панель действий для пустого проекта
+<div class="caption"><img src="img/actionsPanel.png" width=90%><br></div><br>
+А вот панель для уже созданного проекта
+<div class="caption"><img src="img/actionsPanel_1.png" width=90%><br></div><br>
+Добавились кнопки <strong>Fork</strong> - разделить проект, <strong>Set as base</strong> - установить эту версию проекта в качестве основной (базовой) и <strong>Embed</strong> - встроить проект в другой ресурс, сайт, статью и т.д.
+Вместо кнопки <strong>Sign in</strong> появилась кнопка управления профилем пользователя.
+
+<h3>Сохранение и разветвление кода<br><span style="font-size:0.8em;">(Saving and Forking code)</span></h3>
+<div class=list><strong>Save/Update</strong> делает то, что и написано, сохраняет новый проект или обновляет существующий (и добавит в его название номер версии).</div>
+<div class=list><strong>Fork</strong> разделяет существующий проект на новый, начинающийся с версии <tt>0</tt>.</div>
+<br><br>
+
+<h3>Установка проекта в качестве базовой версии<br><span style="font-size:0.8em;">(Setting fiddle as Base Version)</span></h3>
+<div class=note><span style="font-size:2em; background-color:#00bfff; color:#ffffff;">&nbsp;&#9432;&nbsp;</span>&nbsp; Это действие доступно только для зарегистрированных пользователей.</div>
+При работе с проектом и его обновлении номер его версии будет увеличиваться. Иногда, если код вас удовлетворяет, хорошо бы сохранить его, скрыв номер данной версии, и установить эту версию базовой, т.е. первой по умолчанию.<br>
+Например, если имеющийся проект <tt>jsfiddle.net/oskar/aba321/23</tt> установить как базовый, то эта 23 версия станет доступной как <tt>jsfiddle.net/oskar/aba321</tt>.<br><br>
+
+<div class=note><span style="font-size:2em; background-color:#00bfff; color:#ffffff;">&nbsp;&#9432;&nbsp;</span>&nbsp; При сохранении нового названия (title) или описания (description) проекта, на панели управления не происходит каких-либо изменений, чтобы они появились нужно установить этот проект как базовый (Base).</div>
+
+<br><br>
+</body></html>
