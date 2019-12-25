@@ -8,10 +8,9 @@
 
 <body>
 <h1>Асинхронные запросы</h1>
-Для улучшения пользовательских экспериментов были созданы функции Echo. Они позволяют создавать асинхронные запросы, добавлять javascript-файлы, создавать "работников" - все из одного проекта, так что он стал более прозрачен для чтения кода пользователем.
+Для улучшения пользовательских экспериментов были созданы функции <tt>Echo</tt>. Они позволяют создавать асинхронные запросы, добавлять javascript-файлы, создавать "работников" - все из одного проекта, так что он стал более прозрачен для чтения кода пользователем.
 To improve user experience Echo features has been created. This allows to test asynchronous requests, add javascript files, create workers - all from one fiddle, so it is more transparent for the user reading the code.<br><br>
-Асинхронные запросы разделяются на HTML, JSON, JSONP и XML. Ответы Gist и GitHub  похожи на функцию echo и хорошо работают в паре с сохранением проектов в gist и GitHub.
-Asynchronous requests are split to HTML, JSON, JSONP and XML. Gist and github responses are similar to the echo feature and go nicely in pair with storing fiddles in gist and github.<br><br>
+Асинхронные запросы разделяются на HTML, JSON, JSONP и XML. Ответы Gist и GitHub  похожи на функцию <tt>echo</tt> и хорошо сочетаются с сохранением проектов в gist и GitHub.<br><br>
 
 <!-- Метод GET используется для запроса содержимого указанного ресурса. С помощью метода GET можно также начать какой-либо процесс. В этом случае в тело ответного сообщения следует включить информацию о ходе выполнения процесса.
 
@@ -107,7 +106,7 @@ External resources loaded into this fiddle:
 <pre>URL: /echo/json/</pre>
 <table class="tbl_1" border="1" cellpadding="5" style="margin-left:3em;">
 <tr class="head1"><td><br><span style="font-size:0.8em;">Option key</span></td><td>Описание<br><span style="font-size:0.8em;">Description</span></td></tr>
-<tr><td>json</td><td>JSON string representing the object jsFiddle should return. It has to be valid JSON or error will be returned</td></tr>
+<tr><td>json</td><td>Должна возвратиться строка в формате JSON, представляющая объект jsFiddle. Она должна быть корректной JSON-строкой или будет возвращена ошибка.</td></tr>
 <tr><td>delay</td><td>Это время в секундах, по истечении которых должны быть возвращены данные (дополнительный, необязательный параметр).</td></tr>
 </table><br><br>
 
@@ -121,7 +120,7 @@ JSFiddle will respond all data given in request. It uses URL with host and proto
 <pre>URL: https://jsfiddle.net/echo/jsonp/</pre>
 <table class="tbl_1" border="1" cellpadding="5" style="margin-left:3em;">
 <tr class="head1"><td><br><span style="font-size:0.8em;">Option key</span></td><td>Описание<br><span style="font-size:0.8em;">Description</span></td></tr>
-<tr><td>callback</td><td>имя функции <tt>jsonp</tt></td></tr>
+<tr><td>callback</td><td>Имя функции <tt>jsonp</tt></td></tr>
 <tr><td>delay</td><td>Это время в секундах, по истечении которых должны быть возвращены данные (дополнительный, необязательный параметр).</td></tr>
 </table><br><br>
 
@@ -132,7 +131,7 @@ JSFiddle will respond all data given in request. It uses URL with host and proto
 <pre>URL: /echo/xml/</pre>
 <table class="tbl_1" border="1" cellpadding="5" style="margin-left:3em;">
 <tr class="head1"><td><br><span style="font-size:0.8em;">Option key</span></td><td>Описание<br><span style="font-size:0.8em;">Description</span></td></tr>
-<tr><td>xml</td><td>Valid string representing XML code</td></tr>
+<tr><td>xml</td><td>Корректная строка XML кода.</td></tr>
 <tr><td>delay</td><td>Это время в секундах, по истечении которых должны быть возвращены данные (дополнительный, необязательный параметр).</td></tr>
 </table><br><br>
 
